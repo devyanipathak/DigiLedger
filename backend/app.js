@@ -11,14 +11,19 @@ const PORT = process.env.PORT;
 //middlewares
 app.use(express.json());
 const corsOptions = {
-  // origin: "http://localhost:3000", 
-  origin: "https://digiledger-tau.vercel.app",
+  // origin: "http://localhost:3000",
+  origin: "https://digiledger-tau.vercel.app/",
   methods: "GET,POST,PUT,DELETE,OPTIONS",
   allowedHeaders: "Content-Type,Authorization",
   credentials: true,
 };
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://digiledger-tau.vercel.app"],
+    credentials: true,
+  })
+);
 
 //routes
 const path = require("path");

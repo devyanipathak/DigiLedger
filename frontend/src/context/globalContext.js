@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import axios from "axios";
 
 // const BASE_URL = "http://localhost:5000/api/v1/";
-const BASE_URL = "https://digiledger-tau.vercel.app/api/v1/";
+const BASE_URL = "https://digiledger-1.onrender.com/api/v1/";
 
 const GlobalContext = React.createContext();
 
@@ -39,7 +39,7 @@ export const GlobalProvider = ({ children }) => {
         success: false,
         error: err.response?.data?.message || "UNKNOWN_ERROR",
       };
-    }finally{
+    } finally {
       setLoading(false);
     }
   };
@@ -55,8 +55,8 @@ export const GlobalProvider = ({ children }) => {
       return { success: true };
     } catch (err) {
       return { success: false, message: err.response.data.message };
-    }finally{
-      setLoading(false);  
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -102,7 +102,7 @@ export const GlobalProvider = ({ children }) => {
     expense.amount = Number(expense.amount);
     await axios.post(`${BASE_URL}add-expense`, expense, config);
     getExpenses();
-    setLoading(false);  
+    setLoading(false);
   };
 
   const getExpenses = async () => {
@@ -130,18 +130,17 @@ export const GlobalProvider = ({ children }) => {
     return history.slice(0, 3);
   };
 
- const allTransactions = () => {
-  const history = [...incomes, ...expenses];
+  const allTransactions = () => {
+    const history = [...incomes, ...expenses];
 
-  history.sort((a, b) => {
-    const dateA = new Date(a.date || a.createdAt);
-    const dateB = new Date(b.date || b.createdAt);
-    return dateB - dateA;
-  });
+    history.sort((a, b) => {
+      const dateA = new Date(a.date || a.createdAt);
+      const dateB = new Date(b.date || b.createdAt);
+      return dateB - dateA;
+    });
 
-  return history;
-};
-
+    return history;
+  };
 
   return (
     <GlobalContext.Provider
