@@ -1,91 +1,59 @@
-DigiLedger 💰
+# DigiLedger 💰
+A multi-user expense and income tracking web application built using the MERN stack.
 
-A Multi-User Expense & Income Tracking Web Application
+## 📌 Overview
+DigiLedger helps users manage their personal finances by tracking income and expenses in a structured way. Users can categorize transactions, perform full CRUD operations, and visualize their financial data through interactive charts.
 
-📌 Overview
+## 🚀 Features
+- Multi-user support with secure authentication
+- JWT-based authentication and authorization
+- Add, edit, delete, and view income and expense records
+- Predefined categories for better expense and income organization
+- Interactive dashboard with line graphs for visualizing income and expenses over time
+- Responsive and user-friendly UI
 
-DigiLedger is a MERN stack–based multi-user web application designed to help users track, categorize, and manage their expenses and income efficiently. It provides a secure, intuitive interface for personal finance management with full CRUD functionality and visual analytics.
+## 🛠️ Tech Stack
+### Frontend
+- React.js
+- HTML, CSS, JavaScript
+- React Chart Library (for line graph visualization)
 
-🚀 Features
+### Backend
+- Node.js
+- Express.js
 
-🔐 JWT-based Authentication for secure multi-user access
+### Database
+- MongoDB
 
-👥 Multi-user support with isolated user data
+### Authentication
+- JSON Web Tokens (JWT)
 
-📊 Expense & Income Tracking with predefined categories
+## 📊 Dashboard & Data Visualization
+The dashboard displays a line graph that helps users:
+- Track income vs expenses over time
+- Understand spending patterns
+- Gain quick financial insights at a glance
 
-📈 Interactive Line Graph Dashboard to visually represent income and expenses over time
+## 🧩 Application Flow
+1. User signs up or logs in using JWT-based authentication
+2. Authenticated users can add income or expense entries
+3. Transactions are categorized into predefined categories
+4. Dashboard visualizes income and expenses using line charts
+5. Users can update or delete their records at any time
 
-✏️ CRUD Operations for transactions (Create, Read, Update, Delete)
+## 🔒 Security
+- JWT-based authentication for secure access
+- Protected API routes
+- User-specific data isolation
 
-🗂️ Category-wise organization for better financial insights
+## 🎯 Use Cases
+- Personal expense tracking
+- Income management
+- Visual analysis of financial trends
+- Organized financial record keeping
 
-📱 Responsive UI for seamless usage across devices
-
-🛠️ Tech Stack
-
-Frontend
-
-React.js
-
-HTML, CSS, JavaScript
-
-React Chart Library (for line graphs and data visualization)
-
-Backend
-
-Node.js
-
-Express.js
-
-Database
-
-MongoDB
-
-Authentication
-
-JSON Web Tokens (JWT)
-
-🧩 Application Flow
-
-Users sign up or log in using secure JWT authentication
-
-Authenticated users can add income or expense entries
-
-Transactions are categorized into predefined categories
-
-Dashboard displays line graphs showing income vs expenses over time
-
-Users can view, update, or delete their financial records
-
-Data is securely stored and managed in MongoDB
-
-🔒 Security
-
-JWT-based authentication and authorization
-
-Protected routes to prevent unauthorized access
-
-User-specific data isolation
-
-🎯 Use Case
-
-DigiLedger helps individuals:
-
-Track daily expenses and income
-
-Visualize financial trends through charts
-
-Maintain organized financial records
-
-Reduce manual expense tracking
-
-📌 Future Enhancements
-
-Monthly and yearly financial summaries
-
-Advanced data visualization (bar charts, pie charts)
-
-Export reports (PDF/CSV)
-
-Budget limits and spending alerts
+## 📌 Future Enhancements
+- Monthly and yearly summaries
+- Additional chart types (bar, pie)
+- Export data as PDF or CSV
+- Budget limits and alerts
